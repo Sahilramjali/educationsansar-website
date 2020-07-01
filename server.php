@@ -74,6 +74,7 @@ if (isset($_POST['login_user'])) {
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['username'] = $username;
       $_SESSION['success'] = "You are now logged in"; 
+		//cookie created
       if(!empty($_POST["remember"])){
         setcookie("user",$_POST["username"],time()+(60*60*1));
         setcookie("pass",$_POST["password"],time()+(60*60*1));
