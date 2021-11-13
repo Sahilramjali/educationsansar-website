@@ -1,5 +1,5 @@
-
-<?php include('server.php'); ?>
+<?php include('header.php');?>
+<?php require_once "server.php"; ?>
 
 <!DOCTYPE html>
 <html>
