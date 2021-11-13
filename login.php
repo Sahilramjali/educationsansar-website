@@ -1,5 +1,5 @@
-<?php include('header.php');?>
-<?php require_once "server.php"; ?>
+
+<?php include('server.php'); ?>
 
 <!DOCTYPE html>
 <html>
@@ -24,7 +24,7 @@
 	  </div>
 	  <div>
 		  <label for="remember">
-		<input type="checkbox" name="remember" id="remember">Remember me
+		<input type="checkbox" name="remember" id="remember" value=1>Remember me
     </div>
   	<div class="input-group">
   		<button type="submit" class="btn" name="login_user">Login</button>

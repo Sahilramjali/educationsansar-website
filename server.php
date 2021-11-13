@@ -68,17 +68,18 @@ if (isset($_POST['login_user'])) {
   }
 
   if (count($errors) == 0) {
-  	$password = md5($password);
+    $password = md5($password);
   	$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
   	$results = mysqli_query($db, $query);
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['username'] = $username;
       $_SESSION['success'] = "You are now logged in"; 
-		//cookie created
+      header('location: index.php');
       if(!empty($_POST["remember"])){
         setcookie("user",$_POST["username"],time()+(60*60*1));
         setcookie("pass",$_POST["password"],time()+(60*60*1));
-      }else{
+      }
+      else{
         if(isset($_COOKIE["user"])){
           setcookie("user","");
         }
@@ -86,14 +87,11 @@ if (isset($_POST['login_user'])) {
           setcookie("password","");
         }
       }
-      
-      } 
-      header('location: index.php');
-  	}else {
-  		array_push($errors, "Wrong username/password combination");
-    }
-  
+    
+      }else{
+        array_push($errors, "username or password wrong");
 }
- 
+}
+}
 
 ?>

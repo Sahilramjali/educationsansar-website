@@ -11,7 +11,7 @@
    <?php include('header.php');?><!--include header.php in this page-->
    <div class="container-of-course">
         <div class="course-container">
-            <a href="course.php"><img src="images/web21.jpg" >           
+            <a href="html.php"><img src="images/web21.jpg" >           
            <div class="topic">
                <h3 >Web Development</h3>
            </div>
@@ -33,7 +33,13 @@
            </div>
            </a>
         </div>
-       
+        <div class="course-container">
+        <a href="course.php"><img src="images/mores.png" >           
+           <div class="topic">
+               <h3 >more courses</h3>
+           </div>
+           </a>
+        </div>
        
    </div>
    <!--what people says portion-->
